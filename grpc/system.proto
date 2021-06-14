@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+message Status {
+  string kernelArchitecture = 1;
+  string kernelName = 2;
+  string kernelVersion = 3;
+  string operatingSystemName = 4;
+  string operatingSystemVersion = 5;
+  repeated Processor processors = 6;
+  double totalPhysicalMemory = 7;
+  double freePhysicalMemory = 8;
+  double totalVirtualMemory = 9;
+  double freeVirtualMemory = 10;
+  double virtualMemorySize = 11;
+}
+
+message Processor {
+  string architecture = 1;
+  string name = 2;
+  string socket = 3;
+  string vendor = 4;
+}
+
+message Memory {
+  double totalPhysicalMemory = 7;
+  double freePhysicalMemory = 8;
+  double totalVirtualMemory = 9;
+  double freeVirtualMemory = 10;
+  double virtualMemorySize = 11;
+}
+
+service SystemService {
+  rpc getSystemInfo(NoParams) returns (Status);
+  rpc getMemoryStatus (NoParams) returns (Memory);
+}
+
+message NoParams {}
