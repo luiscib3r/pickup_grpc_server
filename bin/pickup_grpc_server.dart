@@ -1,7 +1,5 @@
-import 'dart:io';
+import 'package:pickup_grpc_server/src/server.dart';
 
 void main(List<String> arguments) async {
-  final result = await Process.run('neofetch', []);
-
-  stdout.write(result.stdout);
+  await Server.init();
 }
