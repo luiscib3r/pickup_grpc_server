@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+import "grpc/general_messages.proto";
+
 message Status {
   string kernelArchitecture = 1;
   string kernelName = 2;
@@ -33,5 +35,3 @@ service SystemService {
   rpc getSystemInfo(NoParams) returns (Status);
   rpc getMemoryStatus (NoParams) returns (Memory);
 }
-
-message NoParams {}

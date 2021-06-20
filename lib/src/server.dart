@@ -1,6 +1,7 @@
 import 'package:get_it/get_it.dart';
 import 'package:grpc/grpc.dart' as grpc;
 import 'package:pickup_grpc_server/src/services/system.service.dart';
+import 'package:pickup_grpc_server/src/services/user.service.dart';
 
 import 'config.dart';
 import 'environment.dart';
@@ -15,6 +16,7 @@ class Server {
 
     final server = grpc.Server([
       SystemService(),
+      UserService(),
     ]);
 
     await server.serve(port: environment.PORT);

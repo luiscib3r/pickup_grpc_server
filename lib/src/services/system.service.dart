@@ -1,4 +1,5 @@
 import 'package:grpc/src/server/call.dart';
+import 'package:pickup_grpc_server/src/grpc/general_messages.pb.dart';
 import 'package:pickup_grpc_server/src/grpc/system.pbgrpc.dart';
 import 'package:system_info/system_info.dart';
 

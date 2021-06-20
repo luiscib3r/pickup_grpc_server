@@ -55,10 +55,3 @@ const Memory$json = const {
 
 /// Descriptor for `Memory`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List memoryDescriptor = $convert.base64Decode('CgZNZW1vcnkSMAoTdG90YWxQaHlzaWNhbE1lbW9yeRgHIAEoAVITdG90YWxQaHlzaWNhbE1lbW9yeRIuChJmcmVlUGh5c2ljYWxNZW1vcnkYCCABKAFSEmZyZWVQaHlzaWNhbE1lbW9yeRIuChJ0b3RhbFZpcnR1YWxNZW1vcnkYCSABKAFSEnRvdGFsVmlydHVhbE1lbW9yeRIsChFmcmVlVmlydHVhbE1lbW9yeRgKIAEoAVIRZnJlZVZpcnR1YWxNZW1vcnkSLAoRdmlydHVhbE1lbW9yeVNpemUYCyABKAFSEXZpcnR1YWxNZW1vcnlTaXpl');
-@$core.Deprecated('Use noParamsDescriptor instead')
-const NoParams$json = const {
-  '1': 'NoParams',
-};
-
-/// Descriptor for `NoParams`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List noParamsDescriptor = $convert.base64Decode('CghOb1BhcmFtcw==');

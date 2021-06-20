@@ -382,32 +382,3 @@ class Memory extends $pb.GeneratedMessage {
   void clearVirtualMemorySize() => clearField(11);
 }
 
-class NoParams extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'NoParams', createEmptyInstance: create)
-    ..hasRequiredFields = false
-  ;
-
-  NoParams._() : super();
-  factory NoParams() => create();
-  factory NoParams.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory NoParams.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  NoParams clone() => NoParams()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  NoParams copyWith(void Function(NoParams) updates) => super.copyWith((message) => updates(message as NoParams)) as NoParams; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static NoParams create() => NoParams._();
-  NoParams createEmptyInstance() => create();
-  static $pb.PbList<NoParams> createRepeated() => $pb.PbList<NoParams>();
-  @$core.pragma('dart2js:noInline')
-  static NoParams getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NoParams>(create);
-  static NoParams? _defaultInstance;
-}
-

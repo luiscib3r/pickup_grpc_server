@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package cubaEmprende.v1;
+
+import "grpc/general_messages.proto";
+import "google/protobuf/timestamp.proto";
+
+message User {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+  string phone = 4;
+  string password = 5;
+  google.protobuf.Timestamp created_date = 6;
+  google.protobuf.Timestamp updated_date = 7;
+}
+
+message Users {
+  repeated User users = 1;
+  int32 count = 2;
+}
+
+service UserService {
+  rpc find(Selector) returns (UsersResponse);
+  rpc findOne(Selector) returns (UserResponse);
+  rpc update(UpdateUserRequest) returns (IdResponse);
+  rpc insertOne(User) returns (IdResponse);
+  rpc deleteOne(Selector) returns (IdResponse);
+  rpc count(Selector) returns (CountResponse);
+}
+
+message UsersResponse {
+  oneof result {
+    Users users = 1;
+    Error error = 2;
+  }
+}
+
+message UserResponse {
+  oneof result {
+    User user = 1;
+    Error error = 2;
+  }
+}
+
+message UpdateUserRequest {
+  map<string, string> selector = 1;
+  User user = 2;
+}

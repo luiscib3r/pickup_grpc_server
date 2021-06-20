@@ -1,4 +1,5 @@
 import 'package:grpc/grpc.dart';
+import 'package:pickup_grpc_server/src/grpc/general_messages.pb.dart';
 import 'package:pickup_grpc_server/src/grpc/system.pbgrpc.dart';
 
 void main(List<String> args) async {
